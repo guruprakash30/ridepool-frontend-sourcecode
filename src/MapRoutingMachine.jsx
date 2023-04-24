@@ -114,7 +114,7 @@ const Map = () => {
       pointA:{lat:cord[0].x,lng:cord[0].y},
       pointB:{lat:cord[1].x,lng:cord[1].y}
     }
-    fetch('http://18.116.114.239:8080/details/post',{
+    fetch('https://www.ridepool.online/details/post',{
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -135,7 +135,7 @@ const Map = () => {
 
   const handleGetClick = () =>{
 
-    fetch('http://18.116.114.239:8080/details/get?'+new URLSearchParams({
+    fetch('https://www.ridepool.online/details/get?'+new URLSearchParams({
       pointA:JSON.stringify({lat:cord[0].x,lng:cord[0].y}),
       pointB:JSON.stringify({lat:cord[1].x,lng:cord[1].y}),
       selectedRadioButton:document.querySelector('input[name="answerForGet"]:checked').value
